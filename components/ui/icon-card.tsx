@@ -7,16 +7,22 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Leaf } from "lucide-react"
+import { ReactNode } from "react"
 
-export default function IconCard() {
+interface IconCardProps {
+    icon: ReactNode,
+    title: string,
+    description: string,
+}
+export default function IconCard({icon, title, description}: IconCardProps) {
     return (
-        <Card className="w-[365px]">
-            <Leaf size={60} strokeWidth={1} />
+        <Card className="w-3/12">
+            {icon}
             <CardHeader>
-                <h3 className="uppercase text-4xl">Service name</h3>
+                <h3 className="uppercase text-4xl">{title}</h3>
             </CardHeader>
             <CardContent>
-                <p>A comprehensive design service for residential gardens of all sizes. We begin with a detailed site study, exploring your goals, architectural context, and natural features. The result is a bespoke concept that blends structure, flow, and planting into a cohesive and timeless layout.t</p>
+                <p>{description}</p>
             </CardContent>
         </Card>
     )
