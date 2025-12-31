@@ -3,6 +3,7 @@ import { Arapey, Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Header/>
         {children}
+        <Toaster position="bottom-center"  />
         <Footer/>
       </body>
     </html>
