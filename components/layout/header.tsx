@@ -36,10 +36,10 @@ export default function Header() {
                 <NavigationMenuList className="flex items-center gap-6">
                     {headerLinks.map((l, index) => (
                         l.title.toLocaleLowerCase().includes("contact")
-                            ? <Button key={index} asChild>
-                                <Link className="hover:text-cream hover:transition-all" href={l.link}>{l.title}</Link>
+                            ? <Button key={index} asChild aria-label={l.title+" Button"}>
+                                <Link  aria-label={l.title+" Link"} className="hover:text-cream hover:transition-all" href={l.link}>{l.title}</Link>
                             </Button>
-                            : <Link key={index} href={l.link}>{l.title}</Link>))}
+                            : <Link aria-label={l.title+" Link"} key={index} href={l.link}>{l.title}</Link>))}
 
                 </NavigationMenuList>
             </NavigationMenu>
@@ -56,14 +56,14 @@ export default function Header() {
                             <Logo />
                             <SheetDescription className="flex flex-col text-md  items-start gap-2">
                                 {headerLinks.map((l, index) => (
-                                    <Link key={index} href={l.link} >{l.title}</Link>
+                                    <Link  aria-label={l.title} key={index} href={l.link} >{l.title}</Link>
                                 ))}
                             </SheetDescription>
                         </SheetHeader>
                         <SheetFooter className="w-full flex flex-col items-end gap-2">
                             <SocialMedia />
                             <SheetClose asChild className="w-full">
-                                <Button variant="outline" className="bg-cream" size={"sm"} >Close</Button>
+                                <Button variant="outline" className="bg-cream" size={"sm"} aria-label="Close">Close</Button>
                             </SheetClose>
                         </SheetFooter>
                     </SheetContent>

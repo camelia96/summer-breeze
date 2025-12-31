@@ -6,6 +6,7 @@ import ImgCard from "@/components/ui/img-card";
 import { briefImgs, projects, Service, services } from "@/lib/data";
 import { GardenCard, GardenImage } from "@/lib/types";
 import { getGardenPortfolioImages, getImageById } from "@/lib/unsplash-service";
+import { redimension } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,6 +19,7 @@ export default async function Home() {
   const portfolioImgs = await getGardenPortfolioImages(6, "garden+design+home+outdoor");
 
   const portfolioCards = portfolioImgs.map((p: GardenImage, index: number) => {
+
     const projectTitle = projects.find((p) => p.id == index)?.title;
     const locationTitle = projects.find((p) => p.id === index)?.location;
 
@@ -42,15 +44,15 @@ export default async function Home() {
           <div className="md:h-svh relative w-full md:w-5/6 xl:w-4/6 flex flex-col items-center md:items-start justify-center gap-6 text-white p-16" >
             <h1 className="text-center md:text-left">Timeless gardens shaped by nature and refined by design</h1>
             <p className="text-center md:text-left md:w-4/6">At Summer Breeze garden design, we create landscapes that feel effortless, natural and deeply connected to the way you live.</p>
-            <Button asChild>
-              <Link href={"/#contact"}>Book a consultation</Link>
+            <Button asChild aria-label="Book a consultation button">
+              <Link aria-label="Book a consultation link" href={"/#contact"}>Book a consultation</Link>
             </Button>
           </div>
         </div>
 
         {/** ABOUT */}
         <div className="flex flex-col items-center justify-center p-10 md:p-24 text-center gap-6" id="about">
-          <h3 className="uppercase">Meet the designer</h3>
+          <p  className="uppercase text-lg md:text-lg lg:text-2xl  font-base leading-custom ">Meet the designer</p>
           <h2>A Thoughtful Approach to Living Outdoors</h2>
           <p className="md:w-3/4">Autumn is the creative mind behind Summer Breeze garden design—a boutique studio dedicated to transforming outdoor spaces into refined, livable landscapes. With a background in design, horticulture, and a deep appreciation for natural beauty, she crafts environments that feel effortless, balanced, and uniquely personal.</p>
           <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
@@ -92,8 +94,8 @@ export default async function Home() {
 
             })}
           </div>
-          <Button className="text-center" asChild>
-            <Link href={"/#contact"}>Begin your garden journey</Link>
+          <Button className="text-center" asChild aria-label="Begin your garden journey button">
+            <Link aria-label="Begin your garden journey link" href={"/#contact"}>Begin your garden journey</Link>
           </Button>
         </div>
 
@@ -101,11 +103,11 @@ export default async function Home() {
         <div className="flex flex-col md:flex-row items-center gap-20 md:w-10/12 p-10 md:px-0 md:py-24" id="contact">
           <div className="md:w-3/6 flex flex-col gap-6">
             <h2>Contact us</h2>
-            <p className="text-xs italic text-gray">*Disclaimer: This is not a working form. Its only purpose is to showcase the UI. You can still submit the form but will only get a success alert.</p>
+            <p className="text-xs italic text-[#3f3f3f]">*Disclaimer: This is not a working form. Its only purpose is to showcase the UI. You can still submit the form but will only get a success alert.</p>
             <ContactForm />
           </div>
           <div className="relative w-full md:w-3/6 h-[250px] md:h-[500px]">
-            <Image loading="lazy"  className=" object-cover h-dvh" fill={true} src={contactImage.urls.small} alt={contactImage.alt_description} />
+            <Image loading="lazy"  className=" object-cover h-dvh" fill={true} src={contactImage.urls.regular+redimension} alt={contactImage.alt_description} />
           </div>
         </div>
       </main>

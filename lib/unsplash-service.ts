@@ -1,6 +1,5 @@
 import { GardenImage } from "./types";
 
-
 export async function getGardenPortfolioImages(
   total: number,
   query: string
@@ -8,7 +7,7 @@ export async function getGardenPortfolioImages(
   try {
     const response = await fetch(
       process.env.URL_UNSPLASH! +
-        `search/photos?page=1&per_page=${total}&query=${query}`,
+        `search/photos?page=1&per_page=${total}&query=${query}&count=10&orientation=landscape`,
       {
         headers: {
           Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY!}`,
@@ -17,6 +16,7 @@ export async function getGardenPortfolioImages(
     );
 
     const data = await response.json();
+    console.log(data);
 
     const images: GardenImage[] = data.results.map((r: any) => {
       return {
@@ -27,6 +27,7 @@ export async function getGardenPortfolioImages(
           full: r.urls.full,
           regular: r.urls.regular,
           small: r.urls.small,
+          raw: r.urls.raw
         },
         alt_description: r.alt_description,
       };
@@ -40,14 +41,11 @@ export async function getGardenPortfolioImages(
 
 export async function getImageById(id: string): Promise<GardenImage> {
   try {
-    const response = await fetch(
-      process.env.URL_UNSPLASH! + `photos/${id}`,
-      {
-        headers: {
-          Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY!}`,
-        },
-      }
-    );
+    const response = await fetch(process.env.URL_UNSPLASH! + `photos/${id}`, {
+      headers: {
+        Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY!}`,
+      },
+    });
 
     const data = await response.json();
 
@@ -57,6 +55,7 @@ export async function getImageById(id: string): Promise<GardenImage> {
         full: data.urls.full,
         regular: data.urls.regular,
         small: data.urls.small,
+        raw: data.urls.raw
       },
       alt_description: data.alt_description,
       width: data.width,

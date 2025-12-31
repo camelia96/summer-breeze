@@ -32,7 +32,7 @@ export default function ContactForm() {
                 </Field>
 
                 <Field className="text-center md:text-start">
-                    <Button type="submit" onClick={() => toast.success("Success! You successfully pressed the Submit button")}>Submit</Button>
+                    <Button aria-label="Submit contact form" type="submit" onClick={() => toast.success("Success! You successfully pressed the Submit button")}>Submit</Button>
                 </Field>
             </FieldGroup>
         </FieldSet>

@@ -4,6 +4,7 @@ export interface GardenImage {
     full: string;
     regular: string;
     small: string;
+    raw: string;
   };
   alt_description: string;
   width: number;

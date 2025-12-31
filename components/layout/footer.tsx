@@ -24,9 +24,9 @@ export default function Footer() {
 
                 <div className="flex flex-col capitalize w-64 gap-3">
                     <h3 className="uppercase pb-7">Services</h3>
-                    <Link href={"/#services"} className="hover:underline">Garden design</Link>
-                    <Link href={"/#services"} className="hover:underline">Planting design</Link>
-                    <Link href={"/#services"} className="hover:underline">Design Advice</Link>
+                    <Link  aria-label="Garden design service" href={"/#services"} className="hover:underline">Garden design</Link>
+                    <Link  aria-label="Planting design service" href={"/#services"} className="hover:underline">Planting design</Link>
+                    <Link aria-label="Design planting service" href={"/#services"} className="hover:underline">Design Advice</Link>
                 </div>
 
 
@@ -40,7 +40,7 @@ export default function Footer() {
                 </div>
 
             </div >
-            <div className="p-2 flex flex-col md:flex-row items-center md:items-start justify-center">© 2025 Summer Breeze Garden Design - <span><Link href={"/"}>Privacy Policy</Link> | <Link href={"/"}>Terms & Conditions</Link></span></div>
+            <div className="p-2 flex flex-col md:flex-row items-center md:items-start justify-center">© 2025 Summer Breeze Garden Design - <span><Link aria-label="Privacy Policy" href={"/"}>Privacy Policy</Link> | <Link aria-label="Terms & Conditions" href={"/"}>Terms & Conditions</Link></span></div>
         </>
     )
 }
