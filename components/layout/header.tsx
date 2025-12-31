@@ -48,7 +48,7 @@ export default function Header() {
 
             <div className="visible md:hidden ">
                 <Sheet >
-                    <SheetTrigger><Menu/></SheetTrigger>
+                    <SheetTrigger><Menu aria-label="Open menu - Mobile"/></SheetTrigger>
                     <SheetContent className="flex flex-col items-start bg-cream">
                         <SheetHeader>
                             <SheetTitle >

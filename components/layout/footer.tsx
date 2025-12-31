@@ -6,7 +6,7 @@ import SocialMedia from "./social-media";
 export default function Footer() {
     return (
         <>
-            <div className="bg-light-green text-white flex items-start justify-between py-8 px-10 md:h-96 gap-10 flex-col md:flex-row">
+            <div className="bg-light-green text-black flex items-start justify-between py-8 px-10 md:h-96 gap-10 flex-col md:flex-row">
                 <div className="flex flex-col gap-4">
                     <Logo />
 
@@ -33,7 +33,7 @@ export default function Footer() {
 
                 <div className="flex flex-col w-64 gap-3">
                     <h3 className="uppercase pb-7">Contact</h3>
-                    <h6>Get in touch</h6>
+                    <p className="text-base md:text-lg lg:text-xl xl:text-2xl  italic;">Get in touch</p>
                     <a className=" underline" href="mailto:hello@summerbreeze.com">hello@summerbreeze.com</a>
                     <p>+44 123 456 789</p>
                     <p>Brighton, UK</p>
