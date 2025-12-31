@@ -1,22 +1,17 @@
 import Link from "next/link";
 import Logo from "@/components/design/logo";
-import { Facebook, Instagram, Linkedin, LinkedinIcon, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import SocialMedia from "./social-media";
 
 export default function Footer() {
     return (
         <>
-            <div className="bg-light-green text-white flex items-start justify-between py-8 px-10 h-96 gap-10">
+            <div className="bg-light-green text-white flex items-start justify-between py-8 px-10 md:h-96 gap-10 flex-col md:flex-row">
                 <div className="flex flex-col gap-4">
                     <Logo />
 
 
-                    <div className="flex gap-2 text-dark-green items-center justify-between">
-                        <Instagram strokeWidth={1.5} />
-                        <Youtube strokeWidth={1.1} size={32} />
-                        <Linkedin strokeWidth={1.5} />
-                        <Facebook strokeWidth={1.5} />
-
-                    </div>
+                    <SocialMedia />
                 </div>
 
 
@@ -29,9 +24,9 @@ export default function Footer() {
 
                 <div className="flex flex-col capitalize w-64 gap-3">
                     <h3 className="uppercase pb-7">Services</h3>
-                    <Link href={"#"}>Garden design</Link>
-                    <Link href={"#"}>Planting design</Link>
-                    <Link href={"#"}>Design Advice</Link>
+                    <Link href={"/#services"} className="hover:underline">Garden design</Link>
+                    <Link href={"/#services"} className="hover:underline">Planting design</Link>
+                    <Link href={"/#services"} className="hover:underline">Design Advice</Link>
                 </div>
 
 
@@ -45,7 +40,7 @@ export default function Footer() {
                 </div>
 
             </div >
-            <div className="p-2 flex justify-center">© 2025 Summer Breeze Garden Design - <Link href={"/"}>Privacy Policy</Link> | <Link href={"/"}>Terms & Conditions</Link></div>
+            <div className="p-2 flex flex-col md:flex-row items-center md:items-start justify-center">© 2025 Summer Breeze Garden Design - <span><Link href={"/"}>Privacy Policy</Link> | <Link href={"/"}>Terms & Conditions</Link></span></div>
         </>
     )
 }
