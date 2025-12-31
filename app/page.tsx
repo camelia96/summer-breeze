@@ -98,7 +98,7 @@ export default async function Home() {
         </div>
 
         {/** CONTACT */}
-        <div className="flex flex-col md:flex-row items-center gap-20 md:w-10/12 p-10 md:py-24" id="contact">
+        <div className="flex flex-col md:flex-row items-center gap-20 md:w-10/12 p-10 md:px-0 md:py-24" id="contact">
           <div className="md:w-3/6 flex flex-col gap-6">
             <h2>Contact us</h2>
             <p className="text-xs italic text-gray">*Disclaimer: This is not a working form. Its only purpose is to showcase the UI. You can still submit the form but will only get a success alert.</p>

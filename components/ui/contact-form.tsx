@@ -7,7 +7,7 @@ import { toast } from "sonner";
 export default function ContactForm() {
     return (
         <FieldSet>
-            <FieldGroup className="w-11/12">
+            <FieldGroup className="md:w-11/12">
                 <Field>
                     <FieldLabel>Name</FieldLabel>
                     <Input placeholder="Enter your name" />
