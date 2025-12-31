@@ -77,7 +77,7 @@ export async function getImageById(id: string): Promise<GardenImage> {
 * Performance-First: Strategic code splitting and image optimization
 ## 🏆 Performance Metrics
 
-![Performance](https://img.shields.io/badge/Performance-99%25-brightgreen)
+![Performance](https://img.shields.io/badge/Performance-95%25-brightgreen)
 ![Accessibility](https://img.shields.io/badge/Accessibility-100%25-success)
 ![Best Practices](https://img.shields.io/badge/Best_Practices-100%25-success)
 ![SEO](https://img.shields.io/badge/SEO-100%25-success)
