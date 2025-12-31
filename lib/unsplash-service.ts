@@ -1,6 +1,6 @@
 import { GardenImage } from "./types";
 
-const imageRedimension = "&fm=webp&fit=crop&auto=format&w=";
+const imgRedimension = "&fm=webp&fit=crop&auto=format&w=";
 
 export async function getGardenPortfolioImages(
   total: number,
@@ -9,7 +9,7 @@ export async function getGardenPortfolioImages(
   try {
     const response = await fetch(
       process.env.URL_UNSPLASH! +
-        `search/photos?page=1&per_page=${total}&query=${query}&count=10&orientation=landscape`,
+        `search/photos?page=1&per_page=${total}&query=${query}&count=10&orientation=landscape&w=1300&q=80&fit=crop&auto=format`,
       {
         headers: {
           Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY!}`,
@@ -25,10 +25,10 @@ export async function getGardenPortfolioImages(
         width: r.width,
         height: r.height,
         urls: {
-          full: r.urls.full + imageRedimension + "1500",
-          regular: r.urls.regular + imageRedimension + "700",
-          small: r.urls.small + imageRedimension + "400",
-          raw: r.urls.raw + imageRedimension + "1500",
+          full: r.urls.full+imgRedimension,
+          regular: r.urls.regular+imgRedimension+"700",
+          small: r.urls.small+imgRedimension+"400",
+          raw: r.urls.raw+imgRedimension
         },
         alt_description: r.alt_description,
       };
@@ -53,10 +53,10 @@ export async function getImageById(id: string): Promise<GardenImage> {
     return {
       id: data.id,
       urls: {
-        full: data.urls.full + imageRedimension + "1500",
-        regular: data.urls.regular + imageRedimension + "700",
-        small: data.urls.small + imageRedimension + "400",
-        raw: data.urls.raw + imageRedimension + "1500",
+        full: data.urls.full+imgRedimension,
+        regular: data.urls.regular+imgRedimension+"700",
+        small: data.urls.small+imgRedimension+"400",
+        raw: data.urls.raw+imgRedimension
       },
       alt_description: data.alt_description,
       width: data.width,
