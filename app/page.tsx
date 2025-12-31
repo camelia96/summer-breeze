@@ -52,7 +52,7 @@ export default async function Home() {
 
         {/** ABOUT */}
         <div className="flex flex-col items-center justify-center p-10 md:p-24 text-center gap-6" id="about">
-          <p  className="uppercase text-lg md:text-lg lg:text-2xl  font-base leading-custom ">Meet the designer</p>
+          <p  className="uppercase text-lg md:text-lg lg:text-2xl  font-normal leading-custom ">Meet the designer</p>
           <h2>A Thoughtful Approach to Living Outdoors</h2>
           <p className="md:w-3/4">Autumn is the creative mind behind Summer Breeze garden design—a boutique studio dedicated to transforming outdoor spaces into refined, livable landscapes. With a background in design, horticulture, and a deep appreciation for natural beauty, she crafts environments that feel effortless, balanced, and uniquely personal.</p>
           <div className="flex flex-col md:flex-row gap-10 items-center justify-center">

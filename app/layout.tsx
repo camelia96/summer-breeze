@@ -7,13 +7,19 @@ import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--font-inter",
+  weight: ["400","500", "600"],
   subsets: ["latin"],
+  display: "swap",
+  preload: true
+  
 });
 
 const arapey = Arapey({
   variable: "--font-arapey",
   weight: ["400"],
   subsets: ["latin"],
+  display: "swap",
+  preload: true
 });
 
 export const metadata: Metadata = {
