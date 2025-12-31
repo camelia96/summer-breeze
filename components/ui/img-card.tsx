@@ -1,32 +1,33 @@
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
-    CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
 import Image from "next/image";
 import { Button } from "./button";
-import { Leaf } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { GardenCard } from "@/lib/types";
 
-export default async function ImgCard() {
-    const data = await fetch("https://picsum.photos/seed/picsum/625/450");
-    console.log(data)
+interface ImageCardProps {
+    card: GardenCard
+}
+
+export default function ImgCard(props: ImageCardProps) {
+
     return (
-        <Card>
-            <Image src={data.url} width={625} height={450} alt="Image" />
-
+        <Card >
+            <Image alt={props.card.alt_description} width={625} height={450} src={props.card.urls.regular} className="object-cover object-center w-full h-[250px] md:h-[500px]" />
             <CardContent>
-                <h4>An informal front garden</h4>
-                <div className="flex items-center gap-1">
-                    <Leaf />
-                    <p>Residential garden</p>
+                <h4>{props.card.title}</h4>
+                <div className="flex items-center md:gap-1">
+                    <MapPin size={20} strokeWidth={1}/>
+                    <p>{props.card.location}</p>
                 </div>
             </CardContent>
             <CardFooter>
-                <Button variant={"outline"}>View project</Button>
+                <Button size={"sm"} variant={"outline"}>View project</Button>
             </CardFooter>
         </Card>
     )
 }
+
