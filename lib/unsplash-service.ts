@@ -7,7 +7,7 @@ export async function getGardenPortfolioImages(
   try {
     const response = await fetch(
       process.env.URL_UNSPLASH! +
-        `search/photos?page=1&per_page=${total}&query=${query}&count=10&orientation=landscape`,
+        `search/photos?page=1&per_page=${total}&query=${query}&count=10&orientation=landscape&fm=webp`,
       {
         headers: {
           Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY!}`,
@@ -16,7 +16,6 @@ export async function getGardenPortfolioImages(
     );
 
     const data = await response.json();
-    console.log(data);
 
     const images: GardenImage[] = data.results.map((r: any) => {
       return {

@@ -38,7 +38,7 @@ export default async function Home() {
 
           {backgroundImage
             ? <Image alt={backgroundImage.alt_description} fill={true} className="object-cover scale-x-[-1] opacity-80" src={backgroundImage.urls.full} priority/>
-            : <div className="absolute inset-0  md:px-16 bg-light-green"></div>
+            : <div className="absolute inset-0 md:px-16 bg-light-green"></div>
           }
 
           <div className="md:h-svh relative w-full md:w-5/6 xl:w-4/6 flex flex-col items-center md:items-start justify-center gap-6 text-white p-16" >

@@ -16,7 +16,7 @@ module.exports = {
       gray: "#B5ACA3",
       "light-green": "#c3d3be",
       "dark-green": "#256140",
-	  black: "#000000"
+      black: "#000000",
     },
     fontFamily: {
       sans: ["var(--font-inter)", "system-ui", "sans-serif"],
