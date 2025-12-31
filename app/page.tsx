@@ -35,7 +35,7 @@ export default async function Home() {
         <div className="relative w-full h-[400px] md:h-svh bg-black flex items-center " id="hero">
 
           {backgroundImage
-            ? <Image alt={backgroundImage.alt_description} fill={true} className="object-cover scale-x-[-1] opacity-80" src={backgroundImage.urls.full} />
+            ? <Image alt={backgroundImage.alt_description} fill={true} className="object-cover scale-x-[-1] opacity-80" src={backgroundImage.urls.full} priority/>
             : <div className="absolute inset-0  md:px-16 bg-light-green"></div>
           }
 
@@ -105,7 +105,7 @@ export default async function Home() {
             <ContactForm />
           </div>
           <div className="relative w-full md:w-3/6 h-[250px] md:h-[500px]">
-            <Image className=" object-cover h-dvh" fill={true} src={contactImage.urls.full} alt={contactImage.alt_description} />
+            <Image loading="lazy"  className=" object-cover h-dvh" fill={true} src={contactImage.urls.small} alt={contactImage.alt_description} />
           </div>
         </div>
       </main>
