@@ -11,22 +11,21 @@ interface IconCardProps {
     description: string,
 }
 export default function IconCard({ icon, title, description }: IconCardProps) {
+    const stroke = .5;
+    const size = 60;
+    const responsiveSize = 40;
 
     // Service icons - responsive and dynamic
-    const iconCardStyle = `hidden md:visible text-light-green`;
-    const iconCardStyleResponsive = `visible md:hidden text-light-green`;
+    const iconCardStyle = `hidden md:block text-dark-green`;
+    const iconCardStyleResponsive = `block md:hidden text-dark-green`;
 
     const iconMap = {
-        "Fence": [<Fence key={1} strokeWidth={1} size={60} className={iconCardStyle} />, <Fence key={2} strokeWidth={1} size={40} className={iconCardStyleResponsive} />],
-        "Flower": [<Flower key={1} strokeWidth={1} size={60} className={iconCardStyle} />, <Flower key={2} strokeWidth={1} size={40} className={iconCardStyleResponsive} />],
-        "Pencil Ruler": [<PencilRuler key={1} strokeWidth={1} size={60} className={iconCardStyle} />, <PencilRuler key={2} strokeWidth={1} size={40} className={iconCardStyleResponsive} />],
+        "Fence": [<Fence key={1} strokeWidth={stroke} size={size} className={iconCardStyle} />, <Fence key={2} strokeWidth={stroke} size={responsiveSize} className={iconCardStyleResponsive} />],
+        "Flower": [<Flower key={1} strokeWidth={stroke} size={size} className={iconCardStyle} />, <Flower key={2} strokeWidth={stroke} size={responsiveSize} className={iconCardStyleResponsive} />],
+        "Pencil Ruler": [<PencilRuler key={1} strokeWidth={stroke} size={size} className={iconCardStyle} />, <PencilRuler key={2} strokeWidth={stroke} size={responsiveSize} className={iconCardStyleResponsive} />],
     }
-
-
-    console.log(iconMap[icon as keyof typeof iconMap][0])
     return (
         <Card className="md:w-3/12">
-            
             {iconMap[icon as keyof typeof iconMap]}
             <CardHeader>
                 <h3 className="uppercase text-2xl md:text-4xl">{title}</h3>
