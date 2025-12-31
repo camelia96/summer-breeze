@@ -107,7 +107,7 @@ export default async function Home() {
             <ContactForm />
           </div>
           <div className="relative w-full md:w-3/6 h-[250px] md:h-[500px]">
-            <Image loading="lazy"  className=" object-cover h-dvh" fill={true} src={contactImage.urls.small+redimension} alt={contactImage.alt_description} />
+            <Image loading="lazy"  className=" object-cover h-dvh" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src={contactImage.urls.regular} alt={contactImage.alt_description} />
           </div>
         </div>
       </main>
