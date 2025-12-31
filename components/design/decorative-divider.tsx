@@ -67,10 +67,10 @@ function ParallaxText({ children, baseVelocity = 25 }: ParallaxProps) {
         <div className="parallax bg-light-green p-4 md:p-8 ">
             <motion.div className="scroller flex whitespace-nowrap" style={{ x }}>
 
-                <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</p>
-                <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</p>
-                <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</p>
-                <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</p>
+                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</span>
+                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</span>
+                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</span>
+                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{children}</span>
             </motion.div>
         </div>
     );

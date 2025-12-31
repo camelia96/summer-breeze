@@ -8,6 +8,19 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  async headers() {
+    return [
+      {
+        source: "/_next/static/css/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
