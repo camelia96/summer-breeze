@@ -67,11 +67,11 @@ export default async function Home() {
         <DecorativeDivider />
 
         {/** PROJECTS */}
-        <div className="md:w-10/12 p-10 md:py-20 text-center md:text-start flex flex-col gap-6" id="portfolio">
+        <div className="md:w-10/12 p-10 md:py-20 md:px-0 text-center md:text-start flex flex-col gap-6" id="portfolio">
           <h2>Our garden Projects</h2>
           <p className="md:w-4/6">A curated collection of bespoke outdoor spaces crafted with care, intention, and an eye for timeless beauty. Each garden reflects our client’s lifestyle, the unique character of the site, and our dedication to elegant, natural design.</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 md:gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 md:gap-28 justify-between">
             {portfolioCards.map((p: GardenCard) => (<ImgCard key={p.id} card={p} />))}
           </div>
         </div>
