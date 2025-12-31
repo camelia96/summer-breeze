@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Toaster } from "sonner";
-
+import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({
   variable: "--font-inter",
   weight: ["400", "500", "600"],
@@ -53,6 +53,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${arapey.variable} antialiased`}
       >
+        <Analytics/>
         <Header />
         {children}
         <Toaster position="bottom-center" />
