@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply tracking-custom font-sans text-lg leading-5 font-normal;
+    @apply tracking-custom font-sans text-sm md:text-base lg:text-lg leading-5 font-normal;
   }
 
   h1,
@@ -36,22 +36,22 @@
   }
 
   h1 {
-    @apply text-7xl leading-custom;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-custom;
   }
   h2 {
-    @apply text-6xl leading-custom;
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-custom;
   }
   h3 {
-    @apply text-2xl font-medium;
+    @apply text-lg md:text-lg lg:text-2xl  font-medium leading-custom;
   }
   h4 {
-    @apply text-3xl italic;
+    @apply text-xl md:text-2xl lg:text-3xl italic;
   }
   h5 {
-    @apply text-3xl;
+    @apply text-lg md:text-xl lg:text-2xl xl:text-3xl;
   }
   h6 {
-    @apply text-2xl italic;
+    @apply text-base md:text-lg lg:text-xl xl:text-2xl  italic;
   }
 
   :root {
