@@ -19,7 +19,7 @@ export default function ImgCard(props: ImageCardProps) {
         <Card >
             <Image alt={props.card.alt_description} width={625} height={450} src={props.card.urls.small+redimension} loading="lazy"  className="object-cover object-center w-full h-[250px] md:h-[500px]" />
             <CardContent>
-                <h4>{props.card.title}</h4>
+                <p className="text-xl md:text-2xl lg:text-3xl italic">{props.card.title}</p>
                 <div className="flex items-center md:gap-1">
                     <MapPin size={20} strokeWidth={1}/>
                     <p>{props.card.location}</p>
