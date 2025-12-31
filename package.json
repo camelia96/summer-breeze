@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "eslint"
   },
-
   "browserslist": [
     "chrome >= 90",
     "firefox >= 88",
@@ -16,6 +15,7 @@
     "edge >= 90"
   ],
   "dependencies": {
+    "@next/bundle-analyzer": "^16.1.1",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-label": "^2.1.8",

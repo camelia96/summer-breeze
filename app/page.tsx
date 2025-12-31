@@ -37,7 +37,7 @@ export default async function Home() {
         <div className="relative w-full h-[400px] md:h-svh bg-black flex items-center " id="hero">
 
           {backgroundImage
-            ? <Image alt={backgroundImage.alt_description} fill={true} className="object-cover scale-x-[-1] opacity-80" src={backgroundImage.urls.full} priority/>
+            ? <Image alt={backgroundImage.alt_description} fill={true} className="object-cover scale-x-[-1] opacity-80" src={backgroundImage.urls.full} priority fetchPriority="high"/>
             : <div className="absolute inset-0 md:px-16 bg-light-green"></div>
           }
 
