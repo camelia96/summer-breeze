@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Button } from "./button";
 import { MapPin } from "lucide-react";
 import { GardenCard } from "@/lib/types";
-import { redimension } from "@/lib/utils";
 
 interface ImageCardProps {
     card: GardenCard
@@ -17,9 +16,9 @@ export default function ImgCard(props: ImageCardProps) {
     return (
         
         <Card >
-            <Image alt={props.card.alt_description} width={500} height={450} src={props.card.urls.regular} loading="lazy" priority={false}  className="object-cover object-center w-full h-[250px] md:h-[500px]" />
+            <Image alt={props.card.alt_description} width={500} height={350} src={props.card.urls.regular} loading="lazy" priority={false}  className="object-cover object-center w-full h-[250px] md:h-[22rem]" />
             <CardContent>
-                <p className="text-xl md:text-2xl lg:text-3xl italic">{props.card.title}</p>
+                <p className="font-serif text-xl md:text-3xl italic">{props.card.title}</p>
                 <div className="flex items-center md:gap-1">
                     <MapPin size={20} strokeWidth={1}/>
                     <p>{props.card.location}</p>

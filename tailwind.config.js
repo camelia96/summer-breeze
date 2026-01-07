@@ -24,7 +24,7 @@ module.exports = {
     },
     extend: {
       letterSpacing: {
-        custom: "-6%",
+        custom: "-5%",
         button: "-4%",
       },
       lineHeight: {
