@@ -71,7 +71,7 @@ export default async function Home() {
           <h2>Our garden Projects</h2>
           <p className="md:w-4/6">A curated collection of bespoke outdoor spaces crafted with care, intention, and an eye for timeless beauty. Each garden reflects our client’s lifestyle, the unique character of the site, and our dedication to elegant, natural design.</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 md:gap-12 justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 lg:gap-x-28 justify-between">
             {portfolioCards.map((p: GardenCard) => (<ImgCard key={p.id} card={p} />))}
           </div>
         </div>
