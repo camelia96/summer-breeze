@@ -4,10 +4,11 @@ import "./globals.css";
 import Header from "@/app/ui/layout/header";
 import Footer from "@/app/ui/layout/footer";
 import { Toaster } from "sonner";
+import ClarityProvider from "./ui/layout/clarity-provider";
 
 const inter = Inter({
   variable: "--font-inter",
-  weight: [ "400", "500", "600"],
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
   display: "swap",
   adjustFontFallback: true,
@@ -53,6 +54,7 @@ export default function RootLayout({
       >
 
         <Header />
+        <ClarityProvider />
         {children}
         <Toaster position="bottom-center" />
         <Footer />
