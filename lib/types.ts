@@ -11,7 +11,21 @@ export interface GardenImage {
   height: number;
 }
 
-export type GardenCard = GardenImage & { title: string; location: string };
+export interface Project {
+  id: number;
+  title: string;
+  year: string;
+  location: string;
+}
+
+export interface Service {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export type GardenCard = GardenImage &
+  Pick<Project, "location" | "title" | "year">;
 
 export interface HeaderLink {
   title: string;
