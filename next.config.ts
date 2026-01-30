@@ -1,11 +1,9 @@
 import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   transpilePackages: [],
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
-  },
   experimental: {
     optimizeCss: true,
+
   },
   async headers() {
     return [
@@ -21,6 +19,11 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    qualities: [70],
+    formats: ['image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
     remotePatterns: [
       {
         protocol: "https",

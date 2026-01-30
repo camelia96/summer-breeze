@@ -6,29 +6,22 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     colors: {
-      white: "#FFFFFF",
       cream: "#FEFAEF",
-      gray: "#B5ACA3",
-      "light-green": "#c3d3be",
-      "dark-green": "#256140",
       black: "#000000",
     },
     fontFamily: {
       sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-      serif: ["var(--font-arapey)", "serif"],
+      serif: ["var(--font-dm-text)", "serif"],
     },
     extend: {
       letterSpacing: {
-        custom: "-5%",
-        button: "-4%",
+        custom: "-0.5px",
       },
       lineHeight: {
-        custom: "0.8",
+        custom: "1",
       },
       borderRadius: {
         lg: "var(--radius)",
