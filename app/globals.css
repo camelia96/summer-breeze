@@ -16,33 +16,19 @@
 
 @layer base {
   body {
-    @apply tracking-custom font-sans text-sm md:text-base lg:text-lg leading-5 font-normal;
+    @apply bg-background tracking-custom font-sans text-base md:text-base lg:text-lg leading-5;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply capitalize;
-  }
 
-  h1,
-  h2,
-  h4,
-  h6 {
-    @apply font-serif;
-  }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-custom;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-custom tracking-[-0.4vw];
   }
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl xl:text-6xl leading-custom;
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-custom font-semibold tracking-[-0.2vw];
   }
   h3 {
-    @apply text-lg md:text-lg lg:text-2xl  font-medium leading-custom;
+    @apply text-xl md:text-2xl lg:text-3xl leading-custom font-semibold uppercase text-left tracking-[-0.1vw];
   }
   h4 {
     @apply text-xl md:text-2xl lg:text-3xl italic;
@@ -55,7 +41,7 @@
   }
 
   :root {
-    --background: 0 0% 100%;
+    --background: 120 10% 97%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -63,7 +49,7 @@
     --popover-foreground: 0 0% 3.9%;
     --primary: 147, 44.78%, 26.27%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 108, 20.66%, 76.27%;
+    --secondary: 100 38% 89%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
@@ -74,5 +60,4 @@
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
   }
-
 }
