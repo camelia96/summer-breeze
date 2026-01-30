@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
-import { Arapey, Inter } from "next/font/google";
+import { DM_Serif_Text, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import Header from "@/app/ui/layout/header";
+import Footer from "@/app/ui/layout/footer";
 import { Toaster } from "sonner";
-import { Analytics } from "@vercel/analytics/next"
+
 const inter = Inter({
   variable: "--font-inter",
-  weight: ["400", "500", "600"],
+  weight: [ "400", "500", "600"],
   subsets: ["latin"],
   display: "swap",
-  preload: false,
   adjustFontFallback: true,
 
 });
 
-const arapey = Arapey({
-  variable: "--font-arapey",
+const dmtext = DM_Serif_Text({
+  variable: "--font-dm-text",
   weight: "400",
   subsets: ["latin"],
   display: "swap",
-  preload: false,
   adjustFontFallback: true,
 });
 
@@ -51,9 +49,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${arapey.variable} antialiased`}
+        className={`${inter.variable} ${dmtext.variable} antialiased`}
       >
-        <Analytics/>
+
         <Header />
         {children}
         <Toaster position="bottom-center" />
